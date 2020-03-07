@@ -11,8 +11,7 @@
   dpkg-source --commit
 
 # Build and sign
-  debuild -S -k0x69C51CF4 
-  exit
+  design -S -k0xF14CECE2809C38510FBA8286C758E34A69C51CF4
 
 # Upload package from host
   sudo apt install dput

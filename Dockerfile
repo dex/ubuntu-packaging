@@ -1,5 +1,7 @@
-FROM ubuntu:latest
+FROM ubuntu:eoan
 
+ARG DEBIAN_FRONTEND=noninteractive
+RUN sed -i 's/archive.ubuntu.com/free.nchc.org.tw/g' /etc/apt/sources.list
 RUN apt update
 RUN apt install -y packaging-dev vim
 
