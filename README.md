@@ -18,14 +18,19 @@ dch -i
 dpkg-source --commit
 ```
 
-# Build and sign
+# Build
 ```bash
-design -S -k0xF14CECE2809C38510FBA8286C758E34A69C51CF4
+dpkg-buildpackage -b -uc -us
+```
+
+# Sign
+```bash
+debsign -S -k0xF14CECE2809C38510FBA8286C758E34A69C51CF4 <package>.changes
 ```
 
 # Upload package from host
 ```bash
-dput ppa:dex0827/ppa xxx.changes
+dput ppa:dex0827/ppa <package>.changes
 ```
 
 # Reference
