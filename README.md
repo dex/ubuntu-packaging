@@ -20,7 +20,7 @@ dpkg-source --commit
 
 # Build
 ```bash
-dpkg-buildpackage -b -uc -us
+dpkg-buildpackage -S -uc -us
 ```
 
 # Sign
